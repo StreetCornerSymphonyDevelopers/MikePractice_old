@@ -1,1 +1,3 @@
 # MikePractice
+
+サークルの仕事を楽にするために書いた、GoogleカレンダーとLINE連携のプログラム(GoogleAppsScriptで作成)
