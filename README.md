@@ -36,5 +36,8 @@ SCSポータルは上記に記載のサークルHPのことである。マイク
 ![図2](https://user-images.githubusercontent.com/33088346/120684910-3a012400-c4da-11eb-8767-dec5bff3ac68.png)
 
 # 本プログラムの構成
-本プログラムは[Google Apps Script](https://developers.google.com/gsuite/aspects/appsscript?hl=ja)で作成し、所定の曜日・時間に自動的にスクリプトが起動するように設定した。
+本プログラムは[Google Apps Script](https://developers.google.com/gsuite/aspects/appsscript?hl=ja)で作成し、所定の曜日・時間に自動的にスクリプトが起動するように設定した。プログラムは[こちら](https://github.com/mugitti9/MikePractice/blob/main/MikeManagement.gs)に記載されている。またLINEへのpushやpostを受け取る関数などを設定することにより、LINEとの通信も実現している。
 
+## プログラムの詳細
+LINEのアクセストークンなど環境変数は、Google Drive内のSpreadSheetに記入することにより、セキュリティを高めた。またそれによって、そのSpreadSheetに送信先のLINEグループIDを含めることによって、送信先のグループを変更できるようにした。
+以下関数の
