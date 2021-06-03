@@ -35,3 +35,6 @@ SCSポータルは上記に記載のサークルHPのことである。マイク
 上記で示したプログラムの内下記の青枠内を含んだプログラムである。なお③⑤⑦に関してはSCSポータルの改修により実現したため、本プログラムには入っていない。
 ![図2](https://user-images.githubusercontent.com/33088346/120684910-3a012400-c4da-11eb-8767-dec5bff3ac68.png)
 
+# 本プログラムの構成
+本プログラムは[Google Apps Script](https://developers.google.com/gsuite/aspects/appsscript?hl=ja)で作成し、所定の曜日・時間に自動的にスクリプトが起動するように設定した。
+
