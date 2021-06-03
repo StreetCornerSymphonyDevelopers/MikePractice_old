@@ -39,5 +39,28 @@ SCSポータルは上記に記載のサークルHPのことである。マイク
 本プログラムは[Google Apps Script](https://developers.google.com/gsuite/aspects/appsscript?hl=ja)で作成し、所定の曜日・時間に自動的にスクリプトが起動するように設定した。プログラムは[こちら](https://github.com/mugitti9/MikePractice/blob/main/MikeManagement.gs)に記載されている。またLINEへのpushやpostを受け取る関数などを設定することにより、LINEとの通信も実現している。
 
 ## プログラムの詳細
-LINEのアクセストークンなど環境変数は、Google Drive内のSpreadSheetに記入することにより、セキュリティを高めた。またそれによって、そのSpreadSheetに送信先のLINEグループIDを含めることによって、送信先のグループを変更できるようにした。
-以下関数の
+LINEのアクセストークンなど環境変数は、Google Drive内のSpreadSheetに記入することにより、セキュリティを高めた。またそれによって、そのSpreadSheetに送信先のLINEグループIDを格納することによって、送信先のグループを変更できるようにした。
+以下関数の説明に入る。
+
+### MikeManagement
+音響への予定だしを自動的に作成し、LINEトークルームに送信する。毎週日曜日にスクリプトの定期起動が設定されている。例えば5月3日(月)の2限と5月7日(金)の3,4限にマイク練が入っている場合
+-
+5月3日(月)
+②
+5月7日(金)
+③
+④
+-
+のように作成され、それがLINEトークルームに送信される。
+
+### AnnounceRoom
+毎朝マイク練の部屋を取得し、その部屋名を送信する。毎朝8-9時にこのスクリプトの定期起動が設定されている。
+
+### doPost(e)
+LineからPostが送られてきたときに起動をする。
+
+### ReplyMessageGroupChange(e, type)
+上記doPostが、"予定出しグループ変更"または"部屋アナウンスグループ変更"のテキストで送信されたときに起動する。SpreadSheetの値を変更することによって、予定だし(MikeManagement)やマイク練部屋のアナウンス(AnnounceRoom)の送信先を変更する。
+
+### Push(message,send_id)
+messageの内容をsend_idのトークルームに送信する。LINEに送信を行う全てのスクリプトに用いられている関数である。
