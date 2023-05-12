@@ -1,3 +1,7 @@
+# 備考
+これは初期の音響LINE Botのスクリプトです。
+現在は使用していません。現在は[音響LINE BOT(GCP版)](https://github.com/StreetCornerSymphonyDevelopers/micpractice)を使用しています。
+
 # 概要
 私が所属しているアカペラサークルの係の1つである、音響やマイク練係(説明は後述)の仕事を楽にするために書いたプログラム(GoogleAppsScriptで作成＆動作)
 
